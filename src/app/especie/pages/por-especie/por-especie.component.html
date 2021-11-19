@@ -1,0 +1,71 @@
+<div class="content__separator">
+  <div class="header">
+    <h2>Especie</h2>
+    <button (click)="onChangeStateForm()">Crear especie</button>
+  </div>
+  <div class="table__info">
+    <div class="main_user-container">
+      <div class="user_header">
+        <h3 class="user_title">Especies en Urku</h3>
+      </div>
+      <div class="table">
+        <div class="table_header grid-table-colm">
+          <div class="th" *ngFor="let head of header"><span>{{head}}</span></div>
+        </div>
+        <div class="infinity__scrooll">
+          <app-table-info [data]="especie" *ngFor="let especie of especies" (editEspecie)="onEspecie($event)"
+            (Type)="onType($event)">
+          </app-table-info>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="user-form" [class.active]="stateForm">
+    <div class="content-form">
+      <button (click)="onChangeStateForm()" class="close__user">cerrar</button>
+    </div>
+    <div class="form__inputs">
+      <form [formGroup]="formEspecie">
+        <div class="name">
+          <input type="text" placeholder="nombre" formControlName="name">
+        </div>
+        <div class="genero">
+          <select formControlName="genero">
+            <option [value]="genero.genId" *ngFor="let genero of generos">{{genero.genTipo}}</option>
+          </select>
+        </div>
+        <div class="clasificacion">
+          <select formControlName="clasificacion">
+            <option [value]="clasificacion.clasId" *ngFor="let clasificacion of clasificaciones">
+              {{clasificacion.clasTipo}}</option>
+          </select>
+        </div>
+        <div class="rescatista">
+          <select formControlName="rescatista">
+            <option [value]="rescatista.resId" *ngFor="let rescatista of rescatistas">{{rescatista.resNombre}}</option>
+          </select>
+        </div>
+        <div class="lugar__rescate">
+          <input type="text" placeholder="Lugar Rescate" formControlName="lugarRescate">
+        </div>
+        <div class="fechaIngreso">
+          <input type="datetime-local" placeholder="Fecha de Ingreso" formControlName="fechaIngreso">
+        </div>
+        <div class="observacion">
+          <input type="text" placeholder="observasion" formControlName="observacion">
+        </div>
+      </form>
+
+    </div>
+    <div class="acciones__ventana">
+      <button type="submit" class="guardar" (click)="save()" *ngIf="opcion===1; else editar">Guardar</button>
+      <ng-template #editar>
+        <button type="submit" class="guardar" (click)="editarEspecie()">Editar</button>
+      </ng-template>
+
+
+      <button type="submit" class="cancelar" (click)="close()">Cancelar</button>
+    </div>
+  </div>
+</div>

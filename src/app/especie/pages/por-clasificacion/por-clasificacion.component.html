@@ -1,0 +1,23 @@
+<div class="content__separator">
+  <h2>Clasificacion</h2>
+  <div class="table__info">
+    <div class="main_user-container">
+      <div class="user_header">
+        <h3 class="user_title">Clasificaciones en Urku</h3>
+      </div>
+      <div class="table">
+        <div class="table_header grid-table-colm">
+          <div class="th" *ngFor="let head of header"><span>{{head}}</span></div>
+        </div>
+        <div class="infinity__scrooll">
+          <div class="table_body grid-table-colm" *ngFor="let data of data">
+            <div class="tb"><span>{{data.clasId}}</span></div>
+            <div class="tb"><span>{{data.clasTipo}}</span></div>
+            <div class="tb"><span>. . . . .</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

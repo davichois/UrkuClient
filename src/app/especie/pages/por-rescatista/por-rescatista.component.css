@@ -1,0 +1,83 @@
+/* table */
+.main_user-container {
+  width: auto;
+  min-height: 453px;
+  background-color: var(--blueblackintermedio);
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.user_header {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 35px;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.user_title {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.05em;
+  color: var(--secundary-color_gray);
+}
+
+.table {
+  width: auto;
+  min-height: 356px;
+  background-color: var(--blueblackoscuro);
+  font-family: "Ubuntu", sans-serif;
+  border-radius: 20px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.table_header {
+  width: auto;
+  margin: 20px 0;
+}
+
+.grid-table-colm {
+  width: auto;
+  display: grid;
+  grid-template-columns: 50px 15% 15%;
+}
+
+.table .table_body .tb,
+.table .table_header .th {
+  box-sizing: border-box;
+  padding: 13px 10px;
+  overflow: hidden;
+}
+
+.table .table_body .tb span,
+.table .table_header .th span {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  font-size: 14px;
+  -webkit-line-clamp: 1;
+  line-height: 16px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: var(--secundary-color_gray);
+}
+
+.table .table_body .tb span {
+  font-weight: 500;
+  text-align: center;
+  color: var(--secundary-color_grayclaro);
+}
+
+.table .table_header .th span {
+  font-weight: 700;
+  text-align: center;
+}
+
+.infinity__scrooll {
+  height: 300px;
+  overflow: scroll;
+}

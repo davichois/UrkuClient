@@ -1,0 +1,13 @@
+<div class="table_body grid-table-colm">
+  <div class="tb"><span>{{data.aniId}}</span></div>
+  <div class="tb"><span>{{data.aniNombre}}</span></div>
+  <div class="tb"><span>{{data.aniGenero}}</span></div>
+  <div class="tb"><span>{{data.aniClasificacion}}</span></div>
+  <div class="tb"><span>{{data.aniFechaIngreso | date}}</span></div>
+  <div class="tb"><span>{{data.aniObservaciones}}</span></div>
+  <div class="tb"><span>{{data.aniRescatista}}</span></div>
+  <div class="tb">
+    <button class="opciones" (click)="onEspecieEdit()">editar</button>
+    <button class="opciones" (click)="onEspecieDelete()">eliminar</button>
+  </div>
+</div>

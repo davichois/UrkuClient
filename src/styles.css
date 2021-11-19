@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Ubuntu:wght@400;500;700&display=swap");
+
+:root {
+  --primary-color: #1ea1f1;
+  --secundary-color: #2d9cdb;
+  --blueblackoscuro: #192734;
+  --blueblackintermedio: #253343;
+  --white-color: #ffffff;
+  --white-oscuro: #c4c4c4;
+  --lines-color: #37444d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  color: var(--white-color);
+}
+
+body {
+  background: var(--blueblackoscuro);
+}
+
+.content__separator {
+  padding: 40px;
+  width: 100%;
+}
+
+.table__info {
+  margin-top: 50px;
+}
+
